@@ -21,7 +21,17 @@ def top_word_in_news_json(file_name):
                 tmp_dict[key] = value
 
         sorted_dict = sorted(tmp_dict.items(), key=lambda item: item[1],reverse=True)
-        top_word = sorted_dict[0:10]
-    print(*top_word)
+        print(sorted_dict)
+        list_word = []
+        for i in sorted_dict:
+            list_word.append(i[0])
+        top_word = list_word[0:10]
+    print(top_word)
+
+
+
+
+
 
 top_word_in_news_json("newsafr.json")
+
