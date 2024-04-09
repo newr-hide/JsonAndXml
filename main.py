@@ -6,6 +6,7 @@ def top_word_in_news_json(file_name):
         tmp_list = []
         for i in json_news:
             tmp_list.append(i.get("description").split())
+        print(tmp_list)
         dict_count = {}
         for list in tmp_list:
             for word in list:
